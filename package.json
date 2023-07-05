@@ -1,0 +1,25 @@
+{
+  "name": "cnjm-vue3-h5-doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "pnpm install",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:serve": "vitepress serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnjm/cnjm-vue3-h5-doc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cnjm/cnjm-vue3-h5-doc/issues"
+  },
+  "homepage": "https://github.com/cnjm/cnjm-vue3-h5-doc#readme",
+  "devDependencies": {
+    "vitepress": "^1.0.0-beta.3"
+  }
+}
