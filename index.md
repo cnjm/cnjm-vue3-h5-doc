@@ -13,9 +13,9 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /guide/
+      link: /guide/quickstart
     - theme: alt
-      text: doc-github
+      text: 在线预览
       link: https://github.com/cnjm/cnjm-vue3-h5-doc
 features:
   - icon: 🔮

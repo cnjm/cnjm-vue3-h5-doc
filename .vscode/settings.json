@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["cnjm", "vitepress"]
+  "cSpell.words": [
+    "cnjm",
+    "commitlint",
+    "pinia",
+    "quickstart",
+    "vant",
+    "vitepress"
+  ]
 }

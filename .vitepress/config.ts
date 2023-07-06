@@ -3,28 +3,35 @@ import { DefaultTheme, defineConfig } from "vitepress";
 const nav: DefaultTheme.NavItem[] = [
   { text: "指南", link: "/guide/" },
   {
-    text: "文档",
-    link: "/document/cnjm-vue-h5/",
+    text: "组件",
+    link: "/component/virtual-list",
   },
 ];
 
 const sidebar: DefaultTheme.Sidebar = {
-  "/document/cnjm-vue-h5": [
+  "/guide": [
     {
-      text: "cnjm-vue-h5",
+      text: "指南",
       items: [
-        { text: "介绍", link: "/document/cnjm-vue-h5/" },
-        { text: "快速开始", link: "/document/cnjm-vue-h5/quickstart" },
+        { text: "介绍", link: "/guide/" },
+        { text: "快速开始", link: "/guide/quickstart" },
+        { text: "代码规范", link: "/guide/husky" },
+        { text: "vite配置", link: "/guide/config" },
+        { text: "env环境变量", link: "/guide/env" },
+        { text: "css适配方案", link: "/guide/viewport" },
+        { text: "vant", link: "/guide/viewport" },
+        { text: "vite插件", link: "/guide/vite-plugin" },
+        { text: "全局状态管理", link: "/guide/pinia" },
+        { text: "vue-router", link: "/guide/router" },
+        { text: "axios", link: "/guide/axios" },
+        { text: "mock", link: "/guide/mock" },
       ],
     },
   ],
-  "/document/practical": [
+  "/component": [
     {
-      text: "practical",
-      items: [
-        { text: "practical介绍", link: "/document/practical/" },
-        { text: "快速开始", link: "/document/cnjm-vue-h5/quickstart" },
-      ],
+      text: "组件",
+      items: [{ text: "虚拟列表", link: "/component/virtual-list" }],
     },
   ],
 };
