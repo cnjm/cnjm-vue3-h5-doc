@@ -16,7 +16,7 @@ hero:
       link: /guide/quickstart
     - theme: alt
       text: 在线预览
-      link: https://github.com/cnjm/cnjm-vue3-h5-doc
+      link: https://cnjm.top/vue3-h5
 features:
   - icon: 🔮
     title: 前沿
