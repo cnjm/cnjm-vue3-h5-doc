@@ -38,7 +38,7 @@ server: {
 
 ## plugins vite 插件
 
-所有的 `vite` 相关插件在`/build/vite/plugin/index`中导入使用,并导出 `createVitePlugins` 函数在 `vite.config.ts` 中使用，详细配置见下一章节
+所有的 `vite` 相关插件在`/build/vite/plugin/index`中导入使用,并导出 `createVitePlugins` 函数在 `vite.config.ts` 中使用，详细配置见[vite 插件章节](./vite-plugin)
 
 ```ts
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
