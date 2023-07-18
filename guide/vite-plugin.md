@@ -4,13 +4,19 @@
 
 ## unplugin-vue-components
 
+`unplugin-vue-components` 是一款可以自动导入组件使用同时支持 `TS` 的 `unplugin` 插件。
+
 使用[unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) 已经配置自动导入 `vant`,`src\components\resolver` 下的组件也会默认自动按需导入，目前只找到这种固定的文件结构的方式，具体要看这个[pr](https://github.com/antfu/unplugin-vue-components/pull/645)能不能过。更多自定义导入在 `build\vite\plugin\componentResolver.ts` 可配置
 
 ## unplugin-auto-import
 
+`unplugin-auto-import` 是一款可以自动导入 API 使用同时支持 `TS` 的 `unplugin` 插件。
+
 使用[unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) 已经配置自动导入 `vue`、`vue-router`、`pinia` 以及`/@/hooks/web/useMessage`。更多自定义导入在`build\vite\plugin\autoImport.ts`可配置
 
 ## unplugin-icons
+
+`unplugin-icons` 是一款按需使用图标的 `unplugin` 插件。
 
 使用[unplugin-icons](https://github.com/antfu/unplugin-icons) 按需使用自定义图标（`svg`），同时你可以随意使用[iconify](https://icon-sets.iconify.design/) 中所有的图标集。
 
@@ -52,7 +58,7 @@
 
 1. `unplugin-icons`(`build\vite\plugin\unpluginIcons.ts`) 下的 `customCollections` 新增一个配置项
 
-```ts
+```ts {8-11}
 export const unpluginIcons = () => {
   return Icons({
     // ... other
@@ -71,7 +77,7 @@ export const unpluginIcons = () => {
 
 2. `unplugin-vue-components`(`build\vite\plugin\componentResolver.ts`) 下的 `IconsResolver.customCollections` 数组中新增一个项
 
-```ts
+```ts {11}
 // ...
 IconsResolver({
   prefix: "Icon",
@@ -95,7 +101,15 @@ IconsResolver({
 </template>
 ```
 
+附：[官方示例代码](https://github.com/antfu/unplugin-icons/blob/main/examples/vite-vue3/vite.config.ts)
+
+::: tip 提示
+需要注意的是，如果你的 `svg` 图标内有硬编码比如 `path` 设置有 `fill="#21a675"`，**这将使你设置的 `color` 不会被覆盖**，你可以手动清除，或者在 `FileSystemIconLoader` 是通过正则转化处理。
+:::
+
 ## unplugin-auto-vconsole
+
+`unplugin-auto-vconsole` 是一款可以自动按需导入 `vconsole` 使用的 `unplugin` 插件。
 
 用于动态导入` vconsole`，方便在生产环境查看调试的一款插件，线上链接只需要加上` enable_console=1` 参数即可([unplugin-auto-vconsole](https://github.com/cnjm/unplugin-auto-vconsole))，例如：`http://baidu.com?enable_console=1`，不必担心后续的页面跳转 `vue-router` 会把参数丢失而需要每次都传递 `enable_console`，[router 章节中](./router) 将说明重写的 `router` 以支持跳转支持固定参数，以及对 `params` 的处理，相信这对你是有帮助的。
 
@@ -123,12 +137,14 @@ export const autoVconsolePlugin = (isBuild) => {
 
 ## unocss
 
-[unocss](https://uno.antfu.me/), antfu 大佬的 css 原子化方案。
+[unocss](https://uno.antfu.me/), 参考 `antfu` 大佬的[重新构想原子化 CSS](https://zhuanlan.zhihu.com/p/425814828)。
+
+[参考文档](https://unocss.dev/interactive/)
 
 个人觉得不必一味追求 css 原子化，但确确实实可以带来不少便利，项目大的话，对减少 css 体积还是很有帮助。并且当只需要几句简单的 css 样式时，不用再想一个 class 名称，简直太好了。
 
 ## vite-plugin-mock
 
-用于 mock 数据请求，详情在[mock 章节](./mock)
+`vite-plugin-mock` 是一款模拟请求数据的 `vite` 插件，用于 mock 数据请求，详情在[mock 章节](./mock)
 
 未完待续。。。

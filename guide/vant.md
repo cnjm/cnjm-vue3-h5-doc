@@ -23,4 +23,14 @@ createToast({ message: "弹出toast" });
 </script>
 ```
 
+`build\vite\plugin\autoImport.ts` 配置 `imports`
+
+```json
+{
+  // ...
+  "/@/hooks/web/useMessage": ["useMessage"],
+  // ...
+},
+```
+
 当然，如果你不希望使用约定的导出名称来避免手动引入，也可以去除，在需要的时候再手动引入，这也能让引用更加清晰可见。

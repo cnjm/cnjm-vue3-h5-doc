@@ -22,6 +22,8 @@
 
 ## 使用示例
 
+`src\views\demo\custom`
+
 ```vue
 <template>
   <div>
