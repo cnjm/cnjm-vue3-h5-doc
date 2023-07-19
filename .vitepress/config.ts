@@ -6,6 +6,10 @@ const nav: DefaultTheme.NavItem[] = [
     text: "组件",
     link: "/component/virtual-list",
   },
+  {
+    text: "hooks",
+    link: "/hooks/list",
+  },
 ];
 
 const sidebar: DefaultTheme.Sidebar = {
@@ -45,6 +49,12 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: "组件",
       items: [{ text: "虚拟列表", link: "/component/virtual-list" }],
+    },
+  ],
+  "/hooks": [
+    {
+      text: "hooks",
+      items: [{ text: "list-hook", link: "/component/list" }],
     },
   ],
 };
