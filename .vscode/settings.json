@@ -8,6 +8,7 @@
     "unplugin",
     "vant",
     "vconsole",
-    "vitepress"
+    "vitepress",
+    "vuex"
   ]
 }
