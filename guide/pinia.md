@@ -220,4 +220,37 @@ export const useDemoStore = defineStore({
 });
 ```
 
-## 自定义插件
+## 自定义插件（$resetFields）
+
+当然，我们也能根据业务需要实现一些自定义插件，例如 `pinia` 本身只支持重置整个 `state`，不支持可选的单个值[issues](https://github.com/vuejs/pinia/issues/2287#issuecomment-1612955589)。
+
+既然如此我们便可自定义这样一个插件：
+
+`src\plugins\pinia\piniaReset.ts`
+
+```ts
+import { PiniaPluginContext } from "pinia";
+import { pick } from "lodash-es";
+
+declare module "pinia" {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+  export interface _StoreWithState<Id extends string, S extends StateTree, G, A>
+    extends StoreProperties<Id> {
+    //  选择自定义一个方法名，当然，你也可以覆盖$reset方法，这里只是不想破坏原有的东西，仅为示例
+    $resetFields<K extends keyof S>(fields?: K[]): void;
+  }
+}
+
+export default ({ options, store }: PiniaPluginContext): void => {
+  store.$resetFields = (fields) => {
+    const { state } = options;
+    let originalState = state ? state() : {};
+    store.$patch(($state) => {
+      if (fields) {
+        originalState = pick(originalState, fields);
+      }
+      Object.assign($state, originalState);
+    });
+  };
+};
+```
