@@ -197,25 +197,25 @@ const unsubscribe = demoStore.$onAction(
 );
 ```
 
-## pinia-plugin-persist(state 持久化插件)
+## pinia-plugin-persistedstate(state 持久化插件)
 
-得益于 `pinia` 的插件化设计，`src\store\index.ts` 使用了 `pinia-plugin-persist` 作为 `state` 持久化存储的方案。
+得益于 `pinia` 的插件化设计，`src\store\index.ts` 使用了 `pinia-plugin-persistedstate` 插件作为 `state` 持久化存储的方案。
+
+有个[pinia-plugin-persist](https://github.com/Seb-L/pinia-plugin-persist)也提供相似的功能，这两简直像的离谱，使用上的区别大致就是 pinia-plugin-persist 可以配置 strategies，是个数组，针对不同的 paths 使用不同的 storage，但貌似没有像 pinia-plugin-persistedstate 一样提供一些诸如 beforeRestore 的钩子。
 
 `paths` 中定义需要持久存储的字段
 
-详细用法见[pinia-plugin-persist](https://github.com/prazdevs/pinia-plugin-persistedstate)
+详细用法见[pinia-plugin-persistedstate](https://github.com/prazdevs/pinia-plugin-persistedstate)
 
 ```ts
 export const useDemoStore = defineStore({
   // ...
+  // 持久化存储插件配置persist 默认使用的是 localStorage
   persist: {
-    enabled: true,
-    strategies: [
-      {
-        key: "demo",
-        paths: [""],
-      },
-    ],
+    key: "demo",
+    // storage可自定义见 https://prazdevs.github.io/pinia-plugin-persistedstate/zh/guide/config.html#storage
+    // storage: localStorage,
+    paths: [""],
   },
 });
 ```
