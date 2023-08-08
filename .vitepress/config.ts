@@ -2,14 +2,14 @@ import { DefaultTheme, defineConfig } from "vitepress";
 
 const nav: DefaultTheme.NavItem[] = [
   { text: "指南", link: "/guide/" },
-  {
-    text: "组件",
-    link: "/component/virtual-list",
-  },
-  {
-    text: "hooks",
-    link: "/hooks/list",
-  },
+  // {
+  //   text: "组件",
+  //   link: "/component/virtual-list",
+  // },
+  // {
+  //   text: "hooks",
+  //   link: "/hooks/list",
+  // },
 ];
 
 const sidebar: DefaultTheme.Sidebar = {
@@ -45,18 +45,18 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
   ],
-  "/component": [
-    {
-      text: "组件",
-      items: [{ text: "虚拟列表", link: "/component/virtual-list" }],
-    },
-  ],
-  "/hooks": [
-    {
-      text: "hooks",
-      items: [{ text: "list-hook", link: "/component/list" }],
-    },
-  ],
+  // "/component": [
+  //   {
+  //     text: "组件",
+  //     items: [{ text: "虚拟列表", link: "/component/virtual-list" }],
+  //   },
+  // ],
+  // "/hooks": [
+  //   {
+  //     text: "hooks",
+  //     items: [{ text: "list-hook", link: "/component/list" }],
+  //   },
+  // ],
 };
 
 export default defineConfig({
