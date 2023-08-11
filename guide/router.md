@@ -1,6 +1,16 @@
 # vue-router
 
-##
+vue-router 在稍复杂些的 vue 项目中都有着重要作用，必然是需要着重处理的。
+
+项目中主要有做如下处理：
+
+1. 以 src\views\demo 目录下的文件为例，批量生成路由文件
+
+2. 覆写了 router.push 和 router.replace 以支持携带固定参数、处理 params
+
+3. 路由守卫中有简单的权限判断、动态添加路由
+
+## router 目录结构
 
 ```txt
 ┌───guard
@@ -19,4 +29,5 @@
 └───type.ts 类型
 ```
 
+https://github.com/vuejs/router/blob/main/packages/router/CHANGELOG.md#414-2022-08-22
 未完待续

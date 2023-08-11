@@ -201,7 +201,7 @@ const unsubscribe = demoStore.$onAction(
 
 得益于 `pinia` 的插件化设计，`src\store\index.ts` 使用了 `pinia-plugin-persistedstate` 插件作为 `state` 持久化存储的方案。
 
-有个[pinia-plugin-persist](https://github.com/Seb-L/pinia-plugin-persist)也提供相似的功能，这两简直像的离谱，使用上的区别大致就是 pinia-plugin-persist 可以配置 strategies，是个数组，针对不同的 paths 使用不同的 storage，但貌似没有像 pinia-plugin-persistedstate 一样提供一些诸如 beforeRestore 的钩子。
+有个[pinia-plugin-persist](https://github.com/Seb-L/pinia-plugin-persist)也提供相似的功能，这两简直像的离谱，使用上的区别大致就是 ~~` pinia-plugin-persist` 可以配置 `strategies`，是个数组，针对不同的 `paths` 使用不同的 `storage`~~ (其实`pinia-plugin-persistedstate`同样支持，只是没有在文档中显著标明)，但貌似没有像 `pinia-plugin-persistedstate` 一样提供一些诸如 `beforeRestore` 的钩子。最终使用的是`pinia-plugin-persistedstate`。
 
 `paths` 中定义需要持久存储的字段
 
