@@ -2,6 +2,8 @@
 
 cnjm-vue3-h5, 是一个基于 ts + vite4 + vue3.3 + pinia + vant4 + vue-router4 的一款适用于快速构建 h5 应用的脚手架。
 
+如果对你有用，欢迎给个[star](https://github.com/cnjm/cnjm-vue3-h5)
+
 [线上预览]()
 
 ## 优势
