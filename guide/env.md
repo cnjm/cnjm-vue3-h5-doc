@@ -52,6 +52,9 @@ VITE_ROUTER_MODE = history
 # 是否开启mock
 VITE_USE_MOCK = true
 
+# 是否开启压缩
+VITE_USE_GZIP = true
+
 # 基本接口地址
 VITE_GLOB_API_URL=
 
