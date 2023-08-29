@@ -61,4 +61,10 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
 ## build 配置
 
-`rollup`相关配置将 js 拆分到模块文件夹,其余并无特殊操作，见`vite.config.ts`
+1. `rollup`相关配置将 js 拆分到模块文件夹。
+
+2. `vue、vue-router、axios` 单独打包并且不带 `hash` 值，如不需要可 `vite.config.ts` 中自行去除 `manualChunks`。
+
+3. 开启了大于 `20k` 使用 `gzip` 压缩，如需配置刻在 `build\vite\plugin\compression.ts` 中配置，如需关闭 `env\.env.production` 中 `VITE_USE_GZIP` 改为 `false`。
+
+其余并无特殊操作，见`vite.config.ts`

@@ -147,4 +147,8 @@ export const autoVconsolePlugin = (isBuild) => {
 
 `vite-plugin-mock` 是一款模拟请求数据的 `vite` 插件，用于 mock 数据请求，详情在[mock 章节](./mock)
 
+## vite-plugin-compression
+
+[`vite-plugin-compression`](https://github.com/vbenjs/vite-plugin-compression) 是一款压缩文件的 `vite` 插件，可在配置文件中配置是否开启，是否压缩后删除源文件等
+
 未完待续。。。

@@ -10,6 +10,10 @@
 
 3. 路由守卫中有简单的权限判断、动态添加路由
 
+## router 过渡动画
+
+`src\design\transition` 中配置了一些常见的组件过渡动画，`src\layouts\default\index.vue` 中默认使用 `fade`，也可以在 `route.meta.transitionName` 中单独配置
+
 ## router 目录结构
 
 先了解下主要代码的目录结构，**具体逻辑结合项目代码查看**
