@@ -3,19 +3,19 @@
 ```json
 {
   "dependencies": {
-    "@vueuse/core": "10.3.0",
-    "axios": "^1.4.0",
+    "@vueuse/core": "^10.9.0",
+    "axios": "^1.6.8",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.9",
     "lodash-es": "^4.17.21",
     "nprogress": "^0.2.0",
-    "pinia": "^2.1.6",
-    "pinia-plugin-persistedstate": "^3.2.0",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "qs": "^6.11.2",
-    "vant": "^4.6.5",
+    "vant": "^4.8.11",
     "vconsole": "^3.15.1",
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.4"
+    "vue": "^3.4.23",
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
@@ -29,10 +29,10 @@
     "@typescript-eslint/parser": "^5.18.0",
     "@unocss/preset-attributify": "^0.53.4",
     "@unocss/preset-uno": "^0.53.4",
-    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue": "^4.5.1",
     "autoprefixer": "^10.4.4",
     "chalk": "^5.2.0",
-    "cnjm-postcss-px-to-viewport": "^1.0.0",
+    "cnjm-postcss-px-to-viewport": "^1.0.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
     "eslint": "^8.12.0",
@@ -51,14 +51,14 @@
     "prettier": "^2.6.2",
     "rollup": "^3.28.0",
     "typescript": "^4.6.3",
-    "unocss": "^0.53.4",
+    "unocss": "^0.58.0",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-auto-vconsole": "^0.0.4",
     "unplugin-icons": "^0.16.5",
     "unplugin-vue-components": "^0.25.1",
-    "vite": "^4.4.9",
+    "vite": "^5.2.10",
     "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-html": "^3.2.2",
     "vite-plugin-mock": "^2.9.6",
     "vue-tsc": "^1.8.8"
   }
